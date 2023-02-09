@@ -1,0 +1,3097 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"285 mcc_generated_files/sd_spi/sd_spi.c
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 285: static struct MEDIA_INFORMATION mediaInformation = {MEDIA_NO_ERROR, 512u, SD_STATE_NOT_INITIALIZED, 0ul, 0};
+[c E6578 0 1 2 .. ]
+[n E6578 MEDIA_ERRORS MEDIA_NO_ERROR MEDIA_DEVICE_NOT_PRESENT MEDIA_CANNOT_INITIALIZE  ]
+[c E6574 0 1 2 .. ]
+[n E6574 SD_STATE SD_STATE_NOT_INITIALIZED SD_STATE_READY_FOR_COMMAND SD_STATE_BUSY  ]
+"96
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 96: {
+[s S859 `E6578 1 `us 1 `E6574 1 `ul 1 `uc 1 ]
+[n S859 MEDIA_INFORMATION errorCode sectorSize state finalLBA gSDMode ]
+"41
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 41: {
+[s S858 `us 1 `ul 1 `*uc 1 `ul 1 `uc 1 ]
+[n S858 SD_ASYNC_IO wNumBytes dwBytesRemaining pBuffer dwAddress bStateVariable ]
+"331
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 331: static const struct SD_COMMAND_TABLE_ENTRY sdmmc_cmdtable[] =
+[c E6594 0 1 8 9 10 12 13 16 17 18 23 24 25 32 33 38 41 55 58 59 .. ]
+[n E6594 SD_COMMAND SD_COMMAND_GO_IDLE_STATE SD_COMMAND_SEND_OP_COND SD_COMMAND_SEND_IF_COND SD_COMMAND_SEND_CSD SD_COMMAND_SEND_CID SD_COMMAND_STOP_TRANSMISSION SD_COMMAND_SEND_STATUS SD_COMMAND_SET_BLOCK_LENGTH SD_COMMAND_READ_SINGLE_BLOCK SD_COMMAND_READ_MULTI_BLOCK SD_COMMAND_SET_WRITE_BLOCK_ERASE_COUNT SD_COMMAND_WRITE_SINGLE_BLOCK SD_COMMAND_WRITE_MULTI_BLOCK SD_COMMAND_TAG_SECTOR_START SD_COMMAND_TAG_SECTOR_END SD_COMMAND_ERASE SD_COMMAND_SD_SEND_OP_COND SD_COMMAND_APP_CMD SD_COMMAND_READ_OCR SD_COMMAND_CRC_ON_OFF  ]
+[c E6615 0 1 2 3 4 .. ]
+[n E6615 . SD_RESPONSE_R1 SD_RESPONSE_R1b SD_RESPONSE_R2 SD_RESPONSE_R3 SD_RESPONSE_R7  ]
+"319
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 319: {
+[s S872 `E6594 1 `uc 1 `E6615 1 `a 1 ]
+[n S872 SD_COMMAND_TABLE_ENTRY CmdCode CRC responsetype moreDataExpected ]
+[v F6521 `(v ~T0 @X0 0 tf ]
+[v F6523 `(a ~T0 @X0 0 tf ]
+[v F6525 `(uc ~T0 @X0 0 tf1`uc ]
+[v F6528 `(v ~T0 @X0 0 tf2`*v`ui ]
+[v F6532 `(v ~T0 @X0 0 tf2`*v`ui ]
+[v F6536 `(v ~T0 @X0 0 tf2`*v`ui ]
+[v F6540 `(v ~T0 @X0 0 tf1`uc ]
+[v F6543 `(uc ~T0 @X0 0 tf ]
+[v F6546 `(v ~T0 @X0 0 tf ]
+[v F6545 `(v ~T0 @X0 0 tf1`*F6546 ]
+[v F6549 `(v ~T0 @X0 0 tf ]
+"54 mcc_generated_files/sd_spi/../drivers/spi_master.h
+[; ;mcc_generated_files/sd_spi/../drivers/spi_master.h: 54: typedef struct { void (*spiClose)(void);
+[s S857 `*F6521 1 `*F6523 1 `*F6525 1 `*F6528 1 `*F6532 1 `*F6536 1 `*F6540 1 `*F6543 1 `*F6545 1 `*F6549 1 ]
+[n S857 . spiClose spiOpen exchangeByte exchangeBlock writeBlock readBlock writeByte readByte setSpiISR spiISR ]
+"66
+[; ;mcc_generated_files/sd_spi/../drivers/spi_master.h: 66: extern const spi_master_functions_t spiMaster[];
+[v _spiMaster `CS857 ~T0 @X0 -> 0 `x e ]
+"398 mcc_generated_files/sd_spi/sd_spi.c
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 398:         if( spiMaster[SDFAST].spiOpen() == 0 )
+[c E6515 0 1 .. ]
+[n E6515 . SDFAST SDSLOW  ]
+"7790 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7790:     struct {
+[s S387 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S387 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"7800
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7800:     struct {
+[s S388 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S388 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"7789
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7789: typedef union {
+[u S386 `S387 1 `S388 1 ]
+[n S386 . . . ]
+"7811
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7811: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
+[v _LATCbits `VS386 ~T0 @X0 0 e@3979 ]
+"361 mcc_generated_files/sd_spi/sd_spi.c
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 361: static uint8_t SD_SPI_AsyncReadTasks(struct SD_ASYNC_IO* info);
+[v _SD_SPI_AsyncReadTasks `(uc ~T0 @X0 0 sf1`*S858 ]
+"360
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 360: static uint8_t SD_SPI_AsyncWriteTasks(struct SD_ASYNC_IO* info);
+[v _SD_SPI_AsyncWriteTasks `(uc ~T0 @X0 0 sf1`*S858 ]
+"190
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 190:     {
+[s S861 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S861 . IN_IDLE_STATE ERASE_RESET ILLEGAL_CMD CRC_ERR ERASE_SEQ_ERR ADDRESS_ERR PARAM_ERR B7 ]
+"186
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 186: {
+[u S860 `uc 1 `S861 1 ]
+[n S860 . _byte . ]
+"208
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 208:     {
+[s S863 `uc 1 `uc 1 ]
+[n S863 . _byte0 _byte1 ]
+"213
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 213:     {
+[s S864 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S864 . IN_IDLE_STATE ERASE_RESET ILLEGAL_CMD CRC_ERR ERASE_SEQ_ERR ADDRESS_ERR PARAM_ERR B7 CARD_IS_LOCKED WP_ERASE_SKIP_LK_FAIL ERROR CC_ERROR CARD_ECC_FAIL WP_VIOLATION ERASE_PARAM OUTRANGE_CSD_OVERWRITE ]
+"205
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 205: {
+[u S862 `us 1 `S863 1 `S864 1 ]
+[n S862 . _uint16_t . . ]
+"248
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 248:             {
+[s S868 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S868 . _byte0 _byte1 _byte2 _byte3 ]
+"241
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 241:         {
+[u S867 `ul 1 `S868 1 ]
+[n S867 . _returnVal . ]
+"238
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 238:     {
+[s S866 `uc 1 `S867 1 ]
+[n S866 . _byte argument ]
+"260
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 260:         {
+[s S870 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S870 . IN_IDLE_STATE ERASE_RESET ILLEGAL_CMD CRC_ERR ERASE_SEQ_ERR ADDRESS_ERR PARAM_ERR B7 ]
+"258
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 258:     {
+[s S869 `S870 1 `ul 1 ]
+[n S869 . bits _returnVal ]
+"236
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 236: {
+[u S865 `S866 1 `S869 1 ]
+[n S865 . bytewise bitwise ]
+"278
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 278: {
+[u S871 `S860 1 `S862 1 `S865 1 ]
+[n S871 . r1 r2 r7 ]
+"359
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 359: static SD_RESPONSE SD_SendCmd(uint8_t cmd, uint32_t address);
+[v _SD_SendCmd `(S871 ~T0 @X0 0 sf2`uc`ul ]
+"542
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 542:         response = SD_SendCmd(SD_GO_IDLE_STATE, 0x0);
+[c E6694 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 .. ]
+[n E6694 SD_COMMAND_INDEX SD_GO_IDLE_STATE SD_SEND_OP_COND SD_SEND_IF_COND SD_SEND_CSD SD_SEND_CID SD_STOP_TRANSMISSION SD_SEND_STATUS SD_SET_BLOCK_LENGTH SD_READ_SINGLE_BLOCK SD_READ_MULTI_BLOCK SD_WRITE_SINGLE_BLOCK SD_WRITE_MULTI_BLOCK SD_TAG_SECTOR_START SD_TAG_SECTOR_END SD_ERASE SD_APP_CMD SD_READ_OCR SD_CRC_ON_OFF SD_SD_SEND_OP_COND SD_SET_WRITE_BLOCK_ERASE_COUNT  ]
+"736
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 736:         if((count == 0) && (CSDResponse[0] == SD_TOKEN_START))
+[c E6588 254 252 253 5 255 .. ]
+[n E6588 SD_TOKEN SD_TOKEN_START SD_TOKEN_START_MULTI_BLOCK SD_TOKEN_STOP_TRANSMISSION SD_TOKEN_DATA_ACCEPTED SD_TOKEN_FLOATING_BUS  ]
+"29 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"27
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"54 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
+[; <" ANSELA equ 0F38h ;# ">
+"99
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 99: __asm("ANSELB equ 0F39h");
+[; <" ANSELB equ 0F39h ;# ">
+"149
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 149: __asm("ANSELC equ 0F3Ah");
+[; <" ANSELC equ 0F3Ah ;# ">
+"200
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 200: __asm("ANSELD equ 0F3Bh");
+[; <" ANSELD equ 0F3Bh ;# ">
+"262
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 262: __asm("ANSELE equ 0F3Ch");
+[; <" ANSELE equ 0F3Ch ;# ">
+"294
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 294: __asm("PMD2 equ 0F3Dh");
+[; <" PMD2 equ 0F3Dh ;# ">
+"332
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 332: __asm("PMD1 equ 0F3Eh");
+[; <" PMD1 equ 0F3Eh ;# ">
+"397
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 397: __asm("PMD0 equ 0F3Fh");
+[; <" PMD0 equ 0F3Fh ;# ">
+"474
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 474: __asm("VREFCON2 equ 0F40h");
+[; <" VREFCON2 equ 0F40h ;# ">
+"479
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 479: __asm("DACCON1 equ 0F40h");
+[; <" DACCON1 equ 0F40h ;# ">
+"576
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 576: __asm("VREFCON1 equ 0F41h");
+[; <" VREFCON1 equ 0F41h ;# ">
+"581
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 581: __asm("DACCON0 equ 0F41h");
+[; <" DACCON0 equ 0F41h ;# ">
+"696
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 696: __asm("VREFCON0 equ 0F42h");
+[; <" VREFCON0 equ 0F42h ;# ">
+"701
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 701: __asm("FVRCON equ 0F42h");
+[; <" FVRCON equ 0F42h ;# ">
+"790
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 790: __asm("CTMUICON equ 0F43h");
+[; <" CTMUICON equ 0F43h ;# ">
+"795
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 795: __asm("CTMUICONH equ 0F43h");
+[; <" CTMUICONH equ 0F43h ;# ">
+"940
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 940: __asm("CTMUCONL equ 0F44h");
+[; <" CTMUCONL equ 0F44h ;# ">
+"945
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 945: __asm("CTMUCON1 equ 0F44h");
+[; <" CTMUCON1 equ 0F44h ;# ">
+"1094
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1094: __asm("CTMUCONH equ 0F45h");
+[; <" CTMUCONH equ 0F45h ;# ">
+"1099
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1099: __asm("CTMUCON0 equ 0F45h");
+[; <" CTMUCON0 equ 0F45h ;# ">
+"1206
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1206: __asm("SRCON1 equ 0F46h");
+[; <" SRCON1 equ 0F46h ;# ">
+"1268
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1268: __asm("SRCON0 equ 0F47h");
+[; <" SRCON0 equ 0F47h ;# ">
+"1339
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1339: __asm("CCPTMRS1 equ 0F48h");
+[; <" CCPTMRS1 equ 0F48h ;# ">
+"1391
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1391: __asm("CCPTMRS0 equ 0F49h");
+[; <" CCPTMRS0 equ 0F49h ;# ">
+"1465
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1465: __asm("T6CON equ 0F4Ah");
+[; <" T6CON equ 0F4Ah ;# ">
+"1536
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1536: __asm("PR6 equ 0F4Bh");
+[; <" PR6 equ 0F4Bh ;# ">
+"1556
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1556: __asm("TMR6 equ 0F4Ch");
+[; <" TMR6 equ 0F4Ch ;# ">
+"1576
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1576: __asm("T5GCON equ 0F4Dh");
+[; <" T5GCON equ 0F4Dh ;# ">
+"1671
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1671: __asm("T5CON equ 0F4Eh");
+[; <" T5CON equ 0F4Eh ;# ">
+"1780
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1780: __asm("TMR5 equ 0F4Fh");
+[; <" TMR5 equ 0F4Fh ;# ">
+"1787
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1787: __asm("TMR5L equ 0F4Fh");
+[; <" TMR5L equ 0F4Fh ;# ">
+"1807
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1807: __asm("TMR5H equ 0F50h");
+[; <" TMR5H equ 0F50h ;# ">
+"1827
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1827: __asm("T4CON equ 0F51h");
+[; <" T4CON equ 0F51h ;# ">
+"1898
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1898: __asm("PR4 equ 0F52h");
+[; <" PR4 equ 0F52h ;# ">
+"1918
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1918: __asm("TMR4 equ 0F53h");
+[; <" TMR4 equ 0F53h ;# ">
+"1938
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 1938: __asm("CCP5CON equ 0F54h");
+[; <" CCP5CON equ 0F54h ;# ">
+"2002
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2002: __asm("CCPR5 equ 0F55h");
+[; <" CCPR5 equ 0F55h ;# ">
+"2009
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2009: __asm("CCPR5L equ 0F55h");
+[; <" CCPR5L equ 0F55h ;# ">
+"2029
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2029: __asm("CCPR5H equ 0F56h");
+[; <" CCPR5H equ 0F56h ;# ">
+"2049
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2049: __asm("CCP4CON equ 0F57h");
+[; <" CCP4CON equ 0F57h ;# ">
+"2113
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2113: __asm("CCPR4 equ 0F58h");
+[; <" CCPR4 equ 0F58h ;# ">
+"2120
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2120: __asm("CCPR4L equ 0F58h");
+[; <" CCPR4L equ 0F58h ;# ">
+"2140
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2140: __asm("CCPR4H equ 0F59h");
+[; <" CCPR4H equ 0F59h ;# ">
+"2160
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2160: __asm("PSTR3CON equ 0F5Ah");
+[; <" PSTR3CON equ 0F5Ah ;# ">
+"2236
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2236: __asm("ECCP3AS equ 0F5Bh");
+[; <" ECCP3AS equ 0F5Bh ;# ">
+"2241
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2241: __asm("CCP3AS equ 0F5Bh");
+[; <" CCP3AS equ 0F5Bh ;# ">
+"2478
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2478: __asm("PWM3CON equ 0F5Ch");
+[; <" PWM3CON equ 0F5Ch ;# ">
+"2548
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2548: __asm("CCP3CON equ 0F5Dh");
+[; <" CCP3CON equ 0F5Dh ;# ">
+"2630
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2630: __asm("CCPR3 equ 0F5Eh");
+[; <" CCPR3 equ 0F5Eh ;# ">
+"2637
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2637: __asm("CCPR3L equ 0F5Eh");
+[; <" CCPR3L equ 0F5Eh ;# ">
+"2657
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2657: __asm("CCPR3H equ 0F5Fh");
+[; <" CCPR3H equ 0F5Fh ;# ">
+"2677
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2677: __asm("SLRCON equ 0F60h");
+[; <" SLRCON equ 0F60h ;# ">
+"2721
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2721: __asm("WPUB equ 0F61h");
+[; <" WPUB equ 0F61h ;# ">
+"2783
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2783: __asm("IOCB equ 0F62h");
+[; <" IOCB equ 0F62h ;# ">
+"2822
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2822: __asm("PSTR2CON equ 0F63h");
+[; <" PSTR2CON equ 0F63h ;# ">
+"2962
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2962: __asm("ECCP2AS equ 0F64h");
+[; <" ECCP2AS equ 0F64h ;# ">
+"2967
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 2967: __asm("CCP2AS equ 0F64h");
+[; <" CCP2AS equ 0F64h ;# ">
+"3204
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3204: __asm("PWM2CON equ 0F65h");
+[; <" PWM2CON equ 0F65h ;# ">
+"3274
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3274: __asm("CCP2CON equ 0F66h");
+[; <" CCP2CON equ 0F66h ;# ">
+"3356
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3356: __asm("CCPR2 equ 0F67h");
+[; <" CCPR2 equ 0F67h ;# ">
+"3363
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3363: __asm("CCPR2L equ 0F67h");
+[; <" CCPR2L equ 0F67h ;# ">
+"3383
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3383: __asm("CCPR2H equ 0F68h");
+[; <" CCPR2H equ 0F68h ;# ">
+"3403
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3403: __asm("SSP2CON3 equ 0F69h");
+[; <" SSP2CON3 equ 0F69h ;# ">
+"3465
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3465: __asm("SSP2MSK equ 0F6Ah");
+[; <" SSP2MSK equ 0F6Ah ;# ">
+"3535
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3535: __asm("SSP2CON2 equ 0F6Bh");
+[; <" SSP2CON2 equ 0F6Bh ;# ">
+"3680
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3680: __asm("SSP2CON1 equ 0F6Ch");
+[; <" SSP2CON1 equ 0F6Ch ;# ">
+"3800
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 3800: __asm("SSP2STAT equ 0F6Dh");
+[; <" SSP2STAT equ 0F6Dh ;# ">
+"4200
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4200: __asm("SSP2ADD equ 0F6Eh");
+[; <" SSP2ADD equ 0F6Eh ;# ">
+"4270
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4270: __asm("SSP2BUF equ 0F6Fh");
+[; <" SSP2BUF equ 0F6Fh ;# ">
+"4290
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4290: __asm("BAUDCON2 equ 0F70h");
+[; <" BAUDCON2 equ 0F70h ;# ">
+"4295
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4295: __asm("BAUD2CON equ 0F70h");
+[; <" BAUD2CON equ 0F70h ;# ">
+"4552
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4552: __asm("RCSTA2 equ 0F71h");
+[; <" RCSTA2 equ 0F71h ;# ">
+"4557
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4557: __asm("RC2STA equ 0F71h");
+[; <" RC2STA equ 0F71h ;# ">
+"4840
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4840: __asm("TXSTA2 equ 0F72h");
+[; <" TXSTA2 equ 0F72h ;# ">
+"4845
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 4845: __asm("TX2STA equ 0F72h");
+[; <" TX2STA equ 0F72h ;# ">
+"5092
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5092: __asm("TXREG2 equ 0F73h");
+[; <" TXREG2 equ 0F73h ;# ">
+"5097
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5097: __asm("TX2REG equ 0F73h");
+[; <" TX2REG equ 0F73h ;# ">
+"5130
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5130: __asm("RCREG2 equ 0F74h");
+[; <" RCREG2 equ 0F74h ;# ">
+"5135
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5135: __asm("RC2REG equ 0F74h");
+[; <" RC2REG equ 0F74h ;# ">
+"5168
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5168: __asm("SPBRG2 equ 0F75h");
+[; <" SPBRG2 equ 0F75h ;# ">
+"5173
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5173: __asm("SP2BRG equ 0F75h");
+[; <" SP2BRG equ 0F75h ;# ">
+"5206
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5206: __asm("SPBRGH2 equ 0F76h");
+[; <" SPBRGH2 equ 0F76h ;# ">
+"5211
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5211: __asm("SP2BRGH equ 0F76h");
+[; <" SP2BRGH equ 0F76h ;# ">
+"5244
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5244: __asm("CM2CON1 equ 0F77h");
+[; <" CM2CON1 equ 0F77h ;# ">
+"5249
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5249: __asm("CM12CON equ 0F77h");
+[; <" CM12CON equ 0F77h ;# ">
+"5366
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5366: __asm("CM2CON0 equ 0F78h");
+[; <" CM2CON0 equ 0F78h ;# ">
+"5371
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5371: __asm("CM2CON equ 0F78h");
+[; <" CM2CON equ 0F78h ;# ">
+"5646
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5646: __asm("CM1CON0 equ 0F79h");
+[; <" CM1CON0 equ 0F79h ;# ">
+"5651
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 5651: __asm("CM1CON equ 0F79h");
+[; <" CM1CON equ 0F79h ;# ">
+"6068
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6068: __asm("PIE4 equ 0F7Ah");
+[; <" PIE4 equ 0F7Ah ;# ">
+"6100
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6100: __asm("PIR4 equ 0F7Bh");
+[; <" PIR4 equ 0F7Bh ;# ">
+"6132
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6132: __asm("IPR4 equ 0F7Ch");
+[; <" IPR4 equ 0F7Ch ;# ">
+"6172
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6172: __asm("PIE5 equ 0F7Dh");
+[; <" PIE5 equ 0F7Dh ;# ">
+"6204
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6204: __asm("PIR5 equ 0F7Eh");
+[; <" PIR5 equ 0F7Eh ;# ">
+"6236
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6236: __asm("IPR5 equ 0F7Fh");
+[; <" IPR5 equ 0F7Fh ;# ">
+"6282
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6282: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"6567
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6567: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"6837
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 6837: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"7144
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7144: __asm("PORTD equ 0F83h");
+[; <" PORTD equ 0F83h ;# ">
+"7387
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7387: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"7562
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7562: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"7674
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7674: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"7786
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7786: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"7898
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 7898: __asm("LATD equ 0F8Ch");
+[; <" LATD equ 0F8Ch ;# ">
+"8010
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8010: __asm("LATE equ 0F8Dh");
+[; <" LATE equ 0F8Dh ;# ">
+"8062
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8062: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"8067
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8067: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"8284
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8284: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"8289
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8289: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"8506
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8506: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"8511
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8511: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"8728
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8728: __asm("TRISD equ 0F95h");
+[; <" TRISD equ 0F95h ;# ">
+"8733
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8733: __asm("DDRD equ 0F95h");
+[; <" DDRD equ 0F95h ;# ">
+"8950
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8950: __asm("TRISE equ 0F96h");
+[; <" TRISE equ 0F96h ;# ">
+"8955
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 8955: __asm("DDRE equ 0F96h");
+[; <" DDRE equ 0F96h ;# ">
+"9066
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9066: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"9136
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9136: __asm("HLVDCON equ 0F9Ch");
+[; <" HLVDCON equ 0F9Ch ;# ">
+"9141
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9141: __asm("LVDCON equ 0F9Ch");
+[; <" LVDCON equ 0F9Ch ;# ">
+"9416
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9416: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"9493
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9493: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"9570
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9570: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"9647
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9647: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"9733
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9733: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"9819
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9819: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"9905
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 9905: __asm("PIE3 equ 0FA3h");
+[; <" PIE3 equ 0FA3h ;# ">
+"10015
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10015: __asm("PIR3 equ 0FA4h");
+[; <" PIR3 equ 0FA4h ;# ">
+"10093
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10093: __asm("IPR3 equ 0FA5h");
+[; <" IPR3 equ 0FA5h ;# ">
+"10171
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10171: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"10237
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10237: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"10257
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10257: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"10277
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10277: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"10347
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10347: __asm("EEADRH equ 0FAAh");
+[; <" EEADRH equ 0FAAh ;# ">
+"10381
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10381: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"10386
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10386: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"10390
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10390: __asm("RC1STA equ 0FABh");
+[; <" RC1STA equ 0FABh ;# ">
+"10837
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10837: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"10842
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10842: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"10846
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 10846: __asm("TX1STA equ 0FACh");
+[; <" TX1STA equ 0FACh ;# ">
+"11212
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11212: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"11217
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11217: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"11221
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11221: __asm("TX1REG equ 0FADh");
+[; <" TX1REG equ 0FADh ;# ">
+"11290
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11290: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"11295
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11295: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"11299
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11299: __asm("RC1REG equ 0FAEh");
+[; <" RC1REG equ 0FAEh ;# ">
+"11368
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11368: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"11373
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11373: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"11377
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11377: __asm("SP1BRG equ 0FAFh");
+[; <" SP1BRG equ 0FAFh ;# ">
+"11446
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11446: __asm("SPBRGH1 equ 0FB0h");
+[; <" SPBRGH1 equ 0FB0h ;# ">
+"11451
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11451: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"11455
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11455: __asm("SP1BRGH equ 0FB0h");
+[; <" SP1BRGH equ 0FB0h ;# ">
+"11524
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11524: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"11632
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11632: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"11639
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11639: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"11659
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11659: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"11679
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11679: __asm("T3GCON equ 0FB4h");
+[; <" T3GCON equ 0FB4h ;# ">
+"11774
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11774: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"11779
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 11779: __asm("ECCPAS equ 0FB6h");
+[; <" ECCPAS equ 0FB6h ;# ">
+"12156
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 12156: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"12161
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 12161: __asm("PWMCON equ 0FB7h");
+[; <" PWMCON equ 0FB7h ;# ">
+"12410
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 12410: __asm("BAUDCON1 equ 0FB8h");
+[; <" BAUDCON1 equ 0FB8h ;# ">
+"12415
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 12415: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"12419
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 12419: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"12423
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 12423: __asm("BAUD1CON equ 0FB8h");
+[; <" BAUD1CON equ 0FB8h ;# ">
+"13084
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13084: __asm("PSTR1CON equ 0FB9h");
+[; <" PSTR1CON equ 0FB9h ;# ">
+"13089
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13089: __asm("PSTRCON equ 0FB9h");
+[; <" PSTRCON equ 0FB9h ;# ">
+"13234
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13234: __asm("T2CON equ 0FBAh");
+[; <" T2CON equ 0FBAh ;# ">
+"13305
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13305: __asm("PR2 equ 0FBBh");
+[; <" PR2 equ 0FBBh ;# ">
+"13325
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13325: __asm("TMR2 equ 0FBCh");
+[; <" TMR2 equ 0FBCh ;# ">
+"13345
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13345: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"13427
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13427: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"13434
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13434: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"13454
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13454: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"13474
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13474: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"13545
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13545: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"13613
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13613: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"13738
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13738: __asm("ADRES equ 0FC3h");
+[; <" ADRES equ 0FC3h ;# ">
+"13745
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13745: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"13765
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13765: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"13785
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13785: __asm("SSP1CON2 equ 0FC5h");
+[; <" SSP1CON2 equ 0FC5h ;# ">
+"13790
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 13790: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"14139
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 14139: __asm("SSP1CON1 equ 0FC6h");
+[; <" SSP1CON1 equ 0FC6h ;# ">
+"14144
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 14144: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"14377
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 14377: __asm("SSP1STAT equ 0FC7h");
+[; <" SSP1STAT equ 0FC7h ;# ">
+"14382
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 14382: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"15007
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15007: __asm("SSP1ADD equ 0FC8h");
+[; <" SSP1ADD equ 0FC8h ;# ">
+"15012
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15012: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"15261
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15261: __asm("SSP1BUF equ 0FC9h");
+[; <" SSP1BUF equ 0FC9h ;# ">
+"15266
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15266: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"15315
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15315: __asm("SSP1MSK equ 0FCAh");
+[; <" SSP1MSK equ 0FCAh ;# ">
+"15320
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15320: __asm("SSPMSK equ 0FCAh");
+[; <" SSPMSK equ 0FCAh ;# ">
+"15453
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15453: __asm("SSP1CON3 equ 0FCBh");
+[; <" SSP1CON3 equ 0FCBh ;# ">
+"15458
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15458: __asm("SSPCON3 equ 0FCBh");
+[; <" SSPCON3 equ 0FCBh ;# ">
+"15575
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15575: __asm("T1GCON equ 0FCCh");
+[; <" T1GCON equ 0FCCh ;# ">
+"15670
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15670: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"15783
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15783: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"15790
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15790: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"15810
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15810: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"15830
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15830: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"15963
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15963: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"15991
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 15991: __asm("OSCCON2 equ 0FD2h");
+[; <" OSCCON2 equ 0FD2h ;# ">
+"16048
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16048: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"16131
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16131: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"16201
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16201: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"16208
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16208: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"16228
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16228: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"16248
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16248: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"16319
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16319: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"16326
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16326: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"16346
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16346: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"16353
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16353: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"16373
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16373: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"16393
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16393: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"16413
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16413: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"16433
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16433: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"16453
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16453: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"16460
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16460: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"16467
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16467: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"16487
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16487: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"16494
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16494: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"16514
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16514: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"16534
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16534: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"16554
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16554: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"16574
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16574: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"16594
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16594: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"16632
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16632: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"16639
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16639: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"16659
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16659: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"16666
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16666: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"16686
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16686: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"16706
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16706: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"16726
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16726: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"16746
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16746: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"16766
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16766: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"16858
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16858: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"16928
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 16928: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"17045
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17045: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"17052
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17052: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"17072
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17072: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"17092
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17092: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"17114
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17114: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"17121
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17121: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"17141
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17141: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"17161
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17161: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"17192
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17192: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"17199
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17199: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"17206
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17206: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"17226
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17226: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"17246
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17246: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"17253
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17253: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"17359
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17359: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"17366
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17366: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"17386
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17386: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"17406
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"285 mcc_generated_files/sd_spi/sd_spi.c
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 285: static struct MEDIA_INFORMATION mediaInformation = {MEDIA_NO_ERROR, 512u, SD_STATE_NOT_INITIALIZED, 0ul, 0};
+[v _mediaInformation `S859 ~T0 @X0 1 s ]
+[i _mediaInformation
+:U ..
+:U ..
+. `E6578 0
+-> -> 512 `ui `us
+. `E6574 0
+-> 0 `ul
+-> -> 0 `i `uc
+..
+..
+]
+"286
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 286: static struct SD_ASYNC_IO ioInfo;
+[v _ioInfo `S858 ~T0 @X0 1 s ]
+"331
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 331: static const struct SD_COMMAND_TABLE_ENTRY sdmmc_cmdtable[] =
+[v _sdmmc_cmdtable `CS872 ~T0 @X0 -> 20 `i s ]
+[i _sdmmc_cmdtable
+:U ..
+:U ..
+. `E6594 0
+-> -> 149 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 1
+-> -> 249 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 2
+-> -> 135 `i `uc
+. `E6615 4
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 3
+-> -> 175 `i `uc
+. `E6615 0
+-> -> 1 `i `a
+..
+:U ..
+. `E6594 4
+-> -> 27 `i `uc
+. `E6615 0
+-> -> 1 `i `a
+..
+:U ..
+. `E6594 5
+-> -> 195 `i `uc
+. `E6615 1
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 6
+-> -> 175 `i `uc
+. `E6615 2
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 7
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 8
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 1 `i `a
+..
+:U ..
+. `E6594 9
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 1 `i `a
+..
+:U ..
+. `E6594 11
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 1 `i `a
+..
+:U ..
+. `E6594 12
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 1 `i `a
+..
+:U ..
+. `E6594 13
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 14
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 15
+-> -> 223 `i `uc
+. `E6615 1
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 17
+-> -> 115 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 18
+-> -> 37 `i `uc
+. `E6615 4
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 19
+-> -> 37 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 16
+-> -> 255 `i `uc
+. `E6615 4
+-> -> 0 `i `a
+..
+:U ..
+. `E6594 10
+-> -> 255 `i `uc
+. `E6615 0
+-> -> 0 `i `a
+..
+..
+]
+"367
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 367: _Bool SD_SPI_IsMediaPresent(void)
+[v _SD_SPI_IsMediaPresent `(a ~T0 @X0 1 ef ]
+"368
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 368: {
+{
+[e :U _SD_SPI_IsMediaPresent ]
+[f ]
+"369
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 369:     return 1 ? 1: 0;
+[e ) -> ? != -> 1 `i -> 0 `i : -> 1 `i -> 0 `i `a ]
+[e $UE 873  ]
+"370
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 370: }
+[e :UE 873 ]
+}
+"372
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 372: uint16_t SD_SPI_GetSectorSize(void)
+[v _SD_SPI_GetSectorSize `(us ~T0 @X0 1 ef ]
+"373
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 373: {
+{
+[e :U _SD_SPI_GetSectorSize ]
+[f ]
+"374
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 374:     return mediaInformation.sectorSize;
+[e ) . _mediaInformation 1 ]
+[e $UE 874  ]
+"375
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 375: }
+[e :UE 874 ]
+}
+"377
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 377: uint32_t SD_SPI_GetSectorCount(void)
+[v _SD_SPI_GetSectorCount `(ul ~T0 @X0 1 ef ]
+"378
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 378: {
+{
+[e :U _SD_SPI_GetSectorCount ]
+[f ]
+"379
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 379:     return (mediaInformation.finalLBA);
+[e ) . _mediaInformation 3 ]
+[e $UE 875  ]
+"380
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 380: }
+[e :UE 875 ]
+}
+"382
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 382: _Bool SD_SPI_SectorRead(uint32_t sector_address, uint8_t* buffer, uint16_t sector_count)
+[v _SD_SPI_SectorRead `(a ~T0 @X0 1 ef3`ul`*uc`us ]
+"383
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 383: {
+{
+[e :U _SD_SPI_SectorRead ]
+"382
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 382: _Bool SD_SPI_SectorRead(uint32_t sector_address, uint8_t* buffer, uint16_t sector_count)
+[v _sector_address `ul ~T0 @X0 1 r1 ]
+[v _buffer `*uc ~T0 @X0 1 r2 ]
+[v _sector_count `us ~T0 @X0 1 r3 ]
+"383
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 383: {
+[f ]
+"384
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 384:     struct SD_ASYNC_IO info;
+[v _info `S858 ~T0 @X0 1 a ]
+"385
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 385:     uint8_t status;
+[v _status `uc ~T0 @X0 1 a ]
+"386
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 386:     _Bool result = 0;
+[v _result `a ~T0 @X0 1 a ]
+[e = _result -> -> 0 `i `a ]
+"387
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 387:     uint16_t i;
+[v _i `us ~T0 @X0 1 a ]
+"389
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 389:     for(i=0; i<sector_count; i++)
+{
+[e = _i -> -> 0 `i `us ]
+[e $U 880  ]
+[e :U 877 ]
+"390
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 390:     {
+{
+"392
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 392:         info.wNumBytes = 1 << 9;
+[e = . _info 0 -> << -> 1 `i -> 9 `i `us ]
+"393
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 393:         info.dwBytesRemaining = 1 << 9;
+[e = . _info 1 -> -> << -> 1 `i -> 9 `i `l `ul ]
+"394
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 394:         info.pBuffer = buffer + (i << 9);
+[e = . _info 2 + _buffer * -> << -> _i `ui -> 9 `i `ux -> -> # *U _buffer `ui `ux ]
+"395
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 395:         info.dwAddress = sector_address + i;
+[e = . _info 3 + _sector_address -> _i `ul ]
+"396
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 396:         info.bStateVariable = 0x01;
+[e = . _info 4 -> -> 1 `i `uc ]
+"398
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 398:         if( spiMaster[SDFAST].spiOpen() == 0 )
+[e $ ! == -> ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 1 ..  `i -> 0 `i 881  ]
+"399
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 399:         {
+{
+"400
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 400:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 876  ]
+"401
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 401:         }
+}
+[e :U 881 ]
+"402
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 402:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 884 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 883 ]
+"404
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 404:         while(1)
+[e :U 886 ]
+"405
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 405:         {
+{
+"406
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 406:             status = SD_SPI_AsyncReadTasks(&info);
+[e = _status ( _SD_SPI_AsyncReadTasks (1 &U _info ]
+"407
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 407:             if(status == 0x00)
+[e $ ! == -> _status `i -> 0 `i 888  ]
+"408
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 408:             {
+{
+"409
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 409:                 result = 1;
+[e = _result -> -> 1 `i `a ]
+"410
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 410:                 break;
+[e $U 887  ]
+"411
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 411:             }
+}
+[e $U 889  ]
+"412
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 412:             else if(status == 0xFF)
+[e :U 888 ]
+[e $ ! == -> _status `i -> 255 `i 890  ]
+"413
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 413:             {
+{
+"414
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 414:                 result = 0;
+[e = _result -> -> 0 `i `a ]
+"415
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 415:                 break;
+[e $U 887  ]
+"416
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 416:             }
+}
+[e :U 890 ]
+[e :U 889 ]
+"417
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 417:         }
+}
+[e :U 885 ]
+[e $U 886  ]
+[e :U 887 ]
+"419
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 419:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 893 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 892 ]
+"420
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 420:         spiMaster[SDFAST].spiClose();
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 0 ..  ]
+"421
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 421:     }
+}
+[e ++ _i -> -> 1 `i `us ]
+[e :U 880 ]
+[e $ < -> _i `ui -> _sector_count `ui 877  ]
+[e :U 878 ]
+}
+"423
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 423:     return result;
+[e ) _result ]
+[e $UE 876  ]
+"424
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 424: }
+[e :UE 876 ]
+}
+"426
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 426: _Bool SD_SPI_SectorWrite(uint32_t sector_address, const uint8_t* buffer, uint16_t sector_count)
+[v _SD_SPI_SectorWrite `(a ~T0 @X0 1 ef3`ul`*Cuc`us ]
+"427
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 427: {
+{
+[e :U _SD_SPI_SectorWrite ]
+"426
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 426: _Bool SD_SPI_SectorWrite(uint32_t sector_address, const uint8_t* buffer, uint16_t sector_count)
+[v _sector_address `ul ~T0 @X0 1 r1 ]
+[v _buffer `*Cuc ~T0 @X0 1 r2 ]
+[v _sector_count `us ~T0 @X0 1 r3 ]
+"427
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 427: {
+[f ]
+"428
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 428:     struct SD_ASYNC_IO info;
+[v _info `S858 ~T0 @X0 1 a ]
+"429
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 429:     uint8_t status;
+[v _status `uc ~T0 @X0 1 a ]
+"430
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 430:     _Bool result = 0;
+[v _result `a ~T0 @X0 1 a ]
+[e = _result -> -> 0 `i `a ]
+"431
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 431:     uint16_t i;
+[v _i `us ~T0 @X0 1 a ]
+"433
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 433:     for(i=0; i<sector_count; i++)
+{
+[e = _i -> -> 0 `i `us ]
+[e $U 898  ]
+[e :U 895 ]
+"434
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 434:     {
+{
+"436
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 436:         info.wNumBytes = 1 << 9;
+[e = . _info 0 -> << -> 1 `i -> 9 `i `us ]
+"437
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 437:         info.dwBytesRemaining = 1 << 9;
+[e = . _info 1 -> -> << -> 1 `i -> 9 `i `l `ul ]
+"438
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 438:         info.pBuffer = (uint8_t*)buffer + (i << 9);
+[e = . _info 2 + -> _buffer `*uc * -> << -> _i `ui -> 9 `i `ux -> -> # *U -> _buffer `*uc `ui `ux ]
+"439
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 439:         info.dwAddress = sector_address + i;
+[e = . _info 3 + _sector_address -> _i `ul ]
+"440
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 440:         info.bStateVariable = 0x01;
+[e = . _info 4 -> -> 1 `i `uc ]
+"442
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 442:         if( spiMaster[SDFAST].spiOpen() == 0 )
+[e $ ! == -> ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 1 ..  `i -> 0 `i 899  ]
+"443
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 443:         {
+{
+"444
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 444:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 894  ]
+"445
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 445:         }
+}
+[e :U 899 ]
+"446
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 446:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 902 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 901 ]
+"448
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 448:         while(1)
+[e :U 904 ]
+"449
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 449:         {
+{
+"450
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 450:             status = SD_SPI_AsyncWriteTasks(&info);
+[e = _status ( _SD_SPI_AsyncWriteTasks (1 &U _info ]
+"451
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 451:             if(status == 0x00)
+[e $ ! == -> _status `i -> 0 `i 906  ]
+"452
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 452:             {
+{
+"453
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 453:                 result = 1;
+[e = _result -> -> 1 `i `a ]
+"454
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 454:                 break;
+[e $U 905  ]
+"455
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 455:             }
+}
+[e $U 907  ]
+"456
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 456:             else if(status == 0xFF)
+[e :U 906 ]
+[e $ ! == -> _status `i -> 255 `i 908  ]
+"457
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 457:             {
+{
+"458
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 458:                 result = 0;
+[e = _result -> -> 0 `i `a ]
+"459
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 459:                 break;
+[e $U 905  ]
+"460
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 460:             }
+}
+[e :U 908 ]
+[e :U 907 ]
+"461
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 461:         }
+}
+[e :U 903 ]
+[e $U 904  ]
+[e :U 905 ]
+"463
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 463:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 911 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 910 ]
+"464
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 464:         spiMaster[SDFAST].spiClose();
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 0 ..  ]
+"465
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 465:     }
+}
+[e ++ _i -> -> 1 `i `us ]
+[e :U 898 ]
+[e $ < -> _i `ui -> _sector_count `ui 895  ]
+[e :U 896 ]
+}
+"467
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 467:     return result;
+[e ) _result ]
+[e $UE 894  ]
+"468
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 468: }
+[e :UE 894 ]
+}
+"470
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 470: _Bool SD_SPI_IsMediaInitialized (void)
+[v _SD_SPI_IsMediaInitialized `(a ~T0 @X0 1 ef ]
+"471
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 471: {
+{
+[e :U _SD_SPI_IsMediaInitialized ]
+[f ]
+"472
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 472:     return (mediaInformation.state != SD_STATE_NOT_INITIALIZED);
+[e ) -> -> != -> . _mediaInformation 2 `ui -> . `E6574 0 `ui `i `a ]
+[e $UE 912  ]
+"473
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 473: }
+[e :UE 912 ]
+}
+"475
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 475: _Bool SD_SPI_IsWriteProtected(void)
+[v _SD_SPI_IsWriteProtected `(a ~T0 @X0 1 ef ]
+"476
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 476: {
+{
+[e :U _SD_SPI_IsWriteProtected ]
+[f ]
+"477
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 477:     return 0 ? 1 : 0;
+[e ) -> ? != -> 0 `i -> 0 `i : -> 1 `i -> 0 `i `a ]
+[e $UE 913  ]
+"478
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 478: }
+[e :UE 913 ]
+}
+"483
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 483: static void SD_SPI_DelayMilliseconds(uint8_t milliseconds)
+[v _SD_SPI_DelayMilliseconds `(v ~T0 @X0 1 sf1`uc ]
+"484
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 484: {
+{
+[e :U _SD_SPI_DelayMilliseconds ]
+"483
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 483: static void SD_SPI_DelayMilliseconds(uint8_t milliseconds)
+[v _milliseconds `uc ~T0 @X0 1 r1 ]
+"484
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 484: {
+[f ]
+"485
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 485:     uint16_t timeout = 50u * milliseconds;
+[v _timeout `us ~T0 @X0 1 a ]
+[e = _timeout -> * -> 50 `ui -> _milliseconds `ui `us ]
+"487
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 487:     do { LATCbits.LATC2 = 1; } while(0);
+[e :U 917 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 916 ]
+"488
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 488:     while(timeout--)
+[e $U 918  ]
+[e :U 919 ]
+"489
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 489:     {
+{
+"490
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 490:         (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"491
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 491:     }
+}
+[e :U 918 ]
+"488
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 488:     while(timeout--)
+[e $ != -> -- _timeout -> -> 1 `i `us `ui -> -> 0 `i `ui 919  ]
+[e :U 920 ]
+"492
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 492: }
+[e :UE 914 ]
+}
+"494
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 494: _Bool SD_SPI_MediaInitialize (void)
+[v _SD_SPI_MediaInitialize `(a ~T0 @X0 1 ef ]
+"495
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 495: {
+{
+[e :U _SD_SPI_MediaInitialize ]
+[f ]
+"496
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 496:     uint16_t timeout;
+[v _timeout `us ~T0 @X0 1 a ]
+"497
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 497:     SD_RESPONSE response;
+[v _response `S871 ~T0 @X0 1 a ]
+"498
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 498:     uint8_t CSDResponse[20];
+[v _CSDResponse `uc ~T0 @X0 -> 20 `i a ]
+"499
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 499:     uint8_t count, index;
+[v _count `uc ~T0 @X0 1 a ]
+[v _index `uc ~T0 @X0 1 a ]
+"500
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 500:     uint32_t c_size;
+[v _c_size `ul ~T0 @X0 1 a ]
+"501
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 501:     uint8_t c_size_mult;
+[v _c_size_mult `uc ~T0 @X0 1 a ]
+"502
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 502:     uint8_t block_len;
+[v _block_len `uc ~T0 @X0 1 a ]
+"504
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 504:     mediaInformation.state = SD_STATE_NOT_INITIALIZED;
+[e = . _mediaInformation 2 . `E6574 0 ]
+"505
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 505:     mediaInformation.errorCode = MEDIA_NO_ERROR;
+[e = . _mediaInformation 0 . `E6578 0 ]
+"506
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 506:     mediaInformation.finalLBA = 0x00000000;
+[e = . _mediaInformation 3 -> -> -> 0 `i `l `ul ]
+"507
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 507:     mediaInformation.gSDMode = 0;
+[e = . _mediaInformation 4 -> -> 0 `i `uc ]
+"509
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 509:     do { LATCbits.LATC2 = 1; } while(0);
+[e :U 924 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 923 ]
+"513
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 513:     if( spiMaster[SDSLOW].spiOpen() == 0 )
+[e $ ! == -> ( *U . *U + &U _spiMaster * -> . `E6515 1 `ux -> -> # *U &U _spiMaster `ui `ux 1 ..  `i -> 0 `i 925  ]
+"514
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 514:     {
+{
+"515
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 515:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 921  ]
+"516
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 516:     }
+}
+[e :U 925 ]
+"523
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 523:     SD_SPI_DelayMilliseconds(30u);
+[e ( _SD_SPI_DelayMilliseconds (1 -> -> 30 `ui `uc ]
+"526
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 526:     timeout = 100;
+[e = _timeout -> -> 100 `i `us ]
+"527
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 527:     do
+[e :U 928 ]
+"528
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 528:     {
+{
+"533
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 533:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 931 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 930 ]
+"534
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 534:         (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"538
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 538:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 934 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 933 ]
+"539
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 539:         timeout--;
+[e -- _timeout -> -> 1 `i `us ]
+"542
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 542:         response = SD_SendCmd(SD_GO_IDLE_STATE, 0x0);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 0 `uc -> -> -> 0 `i `l `ul ]
+"543
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 543:     }while((response.r1._byte != 0x01) && (timeout != 0));
+}
+[e $ && != -> . . _response 0 0 `i -> 1 `i != -> _timeout `ui -> -> 0 `i `ui 928  ]
+[e :U 927 ]
+"552
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 552:     if(timeout == 0)
+[e $ ! == -> _timeout `ui -> -> 0 `i `ui 935  ]
+"553
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 553:     {
+{
+"554
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 554:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 938 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 937 ]
+"555
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 555:         (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"559
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 559:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 941 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 940 ]
+"562
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 562:         (void)SD_SendCmd(SD_STOP_TRANSMISSION, 0x0);
+[e ( _SD_SendCmd (2 , -> . `E6694 5 `uc -> -> -> 0 `i `l `ul ]
+"564
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 564:         response = SD_SendCmd(SD_GO_IDLE_STATE, 0x0);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 0 `uc -> -> -> 0 `i `l `ul ]
+"565
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 565:         if(response.r1._byte != 0x01)
+[e $ ! != -> . . _response 0 0 `i -> 1 `i 942  ]
+"566
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 566:         {
+{
+"574
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 574:             mediaInformation.errorCode = MEDIA_CANNOT_INITIALIZE;
+[e = . _mediaInformation 0 . `E6578 2 ]
+"576
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 576:             do { LATCbits.LATC2 = 1; } while(0);
+[e :U 945 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 944 ]
+"577
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 577:             spiMaster[SDFAST].spiClose();
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 0 ..  ]
+"578
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 578:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 921  ]
+"579
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 579:         }
+}
+[e $U 946  ]
+"580
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 580:         else
+[e :U 942 ]
+"581
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 581:         {
+{
+"583
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 583:         }
+}
+[e :U 946 ]
+"584
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 584:     }
+}
+[e $U 947  ]
+"585
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 585:     else
+[e :U 935 ]
+"586
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 586:     {
+{
+"587
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 587:     }
+}
+[e :U 947 ]
+"598
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 598:     response = SD_SendCmd(SD_SEND_IF_COND, 0x1AA);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 2 `uc -> -> -> 426 `i `l `ul ]
+"599
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 599:     if(((response.r7.bytewise.argument._returnVal & 0xFFF) == 0x1AA) && (!response.r7.bitwise.bits.ILLEGAL_CMD))
+[e $ ! && == & . . . . _response 2 0 1 0 -> -> -> 4095 `i `l `ul -> -> -> 426 `i `l `ul ! != -> . . . . _response 2 1 0 2 `i -> 0 `i 948  ]
+"600
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 600:     {
+{
+"608
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 608:         response = SD_SendCmd(SD_READ_OCR, 0x0);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 16 `uc -> -> -> 0 `i `l `ul ]
+"617
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 617:         for(timeout = 0; timeout < 0xFFFF; timeout++)
+{
+[e = _timeout -> -> 0 `i `us ]
+[e $ < -> _timeout `ui -> 65535 `ui 949  ]
+[e $U 950  ]
+[e :U 949 ]
+"618
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 618:         {
+{
+"620
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 620:             (void)SD_SendCmd(SD_APP_CMD, 0x00000000);
+[e ( _SD_SendCmd (2 , -> . `E6694 15 `uc -> -> -> 0 `i `l `ul ]
+"625
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 625:             response = SD_SendCmd(SD_SD_SEND_OP_COND,0x40000000);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 18 `uc -> -> 1073741824 `l `ul ]
+"631
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 631:             if(response.r1._byte == 0)
+[e $ ! == -> . . _response 0 0 `i -> 0 `i 952  ]
+"632
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 632:             {
+{
+"633
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 633:                 break;
+[e $U 950  ]
+"634
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 634:             }
+}
+[e :U 952 ]
+"635
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 635:         }
+}
+[e ++ _timeout -> -> 1 `i `us ]
+[e $ < -> _timeout `ui -> 65535 `ui 949  ]
+[e :U 950 ]
+}
+"637
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 637:         if(timeout >= 0xFFFF)
+[e $ ! >= -> _timeout `ui -> 65535 `ui 953  ]
+"638
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 638:         {
+{
+"639
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 639:             mediaInformation.errorCode = MEDIA_CANNOT_INITIALIZE;
+[e = . _mediaInformation 0 . `E6578 2 ]
+"640
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 640:         }
+}
+[e :U 953 ]
+"644
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 644:         response = SD_SendCmd(SD_READ_OCR, 0x0);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 16 `uc -> -> -> 0 `i `l `ul ]
+"648
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 648:         if(response.r7.bytewise.argument._returnVal & 0x40000000)
+[e $ ! != & . . . . _response 2 0 1 0 -> -> 1073741824 `l `ul -> -> -> 0 `i `l `ul 954  ]
+"649
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 649:         {
+{
+"650
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 650:             mediaInformation.gSDMode = 1;
+[e = . _mediaInformation 4 -> -> 1 `i `uc ]
+"651
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 651:         }
+}
+[e $U 955  ]
+"652
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 652:         else
+[e :U 954 ]
+"653
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 653:         {
+{
+"654
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 654:             mediaInformation.gSDMode = 0;
+[e = . _mediaInformation 4 -> -> 0 `i `uc ]
+"655
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 655:         }
+}
+[e :U 955 ]
+"659
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 659:     }
+}
+[e $U 956  ]
+"660
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 660:     else
+[e :U 948 ]
+"661
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 661:     {
+{
+"666
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 666:         SD_SPI_DelayMilliseconds(1u);
+[e ( _SD_SPI_DelayMilliseconds (1 -> -> 1 `ui `uc ]
+"668
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 668:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 959 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 958 ]
+"671
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 671:         mediaInformation.gSDMode = 0;
+[e = . _mediaInformation 4 -> -> 0 `i `uc ]
+"673
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 673:         timeout = 0x1FFF;
+[e = _timeout -> -> 8191 `i `us ]
+"674
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 674:         do
+[e :U 962 ]
+"675
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 675:         {
+{
+"677
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 677:             response = SD_SendCmd(SD_SEND_OP_COND, 0x00000000);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 1 `uc -> -> -> 0 `i `l `ul ]
+"678
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 678:             timeout--;
+[e -- _timeout -> -> 1 `i `us ]
+"679
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 679:         }while((response.r1._byte != 0x00) && (timeout != 0));
+}
+[e $ && != -> . . _response 0 0 `i -> 0 `i != -> _timeout `ui -> -> 0 `i `ui 962  ]
+[e :U 961 ]
+"682
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 682:         if(timeout == 0)
+[e $ ! == -> _timeout `ui -> -> 0 `i `ui 963  ]
+"683
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 683:         {
+{
+"684
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 684:             mediaInformation.errorCode = MEDIA_CANNOT_INITIALIZE;
+[e = . _mediaInformation 0 . `E6578 2 ]
+"685
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 685:             do { LATCbits.LATC2 = 1; } while(0);
+[e :U 966 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 965 ]
+"686
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 686:         }
+}
+[e $U 967  ]
+"687
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 687:         else
+[e :U 963 ]
+"688
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 688:         {
+{
+"694
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 694:         }
+}
+[e :U 967 ]
+"695
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 695:     }
+}
+[e :U 956 ]
+"698
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 698:     do { LATCbits.LATC2 = 1; } while(0);
+[e :U 970 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 969 ]
+"699
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 699:     spiMaster[SDFAST].spiClose();
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 0 ..  ]
+"700
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 700:     if(spiMaster[SDFAST].spiOpen() == 0)
+[e $ ! == -> ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 1 ..  `i -> 0 `i 971  ]
+"701
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 701:     {
+{
+"702
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 702:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 921  ]
+"703
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 703:     }
+}
+[e :U 971 ]
+"705
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 705:     do { LATCbits.LATC2 = 0; } while(0);
+[e :U 974 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 973 ]
+"708
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 708:     timeout = (uint16_t)20;
+[e = _timeout -> -> 20 `i `us ]
+"709
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 709:     do
+[e :U 977 ]
+"710
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 710:     {
+{
+"712
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 712:         response = SD_SendCmd(SD_SEND_CSD, 0x00);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 3 `uc -> -> -> 0 `i `l `ul ]
+"713
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 713:         timeout--;
+[e -- _timeout -> -> 1 `i `us ]
+"714
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 714:     }while((response.r1._byte != 0x00) && (timeout != 0));
+}
+[e $ && != -> . . _response 0 0 `i -> 0 `i != -> _timeout `ui -> -> 0 `i `ui 977  ]
+[e :U 976 ]
+"716
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 716:     if(timeout == 0x00)
+[e $ ! == -> _timeout `ui -> -> 0 `i `ui 978  ]
+"717
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 717:     {
+{
+"719
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 719:         mediaInformation.errorCode = MEDIA_CANNOT_INITIALIZE;
+[e = . _mediaInformation 0 . `E6578 2 ]
+"721
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 721:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 981 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 980 ]
+"722
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 722:         spiMaster[SDFAST].spiClose();
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 0 ..  ]
+"723
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 723:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 921  ]
+"724
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 724:     }
+}
+[e :U 978 ]
+"729
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 729:     index = 0;
+[e = _index -> -> 0 `i `uc ]
+"730
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 730:     for (count = 0; count < 20u; count ++)
+{
+[e = _count -> -> 0 `i `uc ]
+[e $ < -> _count `ui -> 20 `ui 982  ]
+[e $U 983  ]
+[e :U 982 ]
+"731
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 731:     {
+{
+"732
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 732:         CSDResponse[index] = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = *U + &U _CSDResponse * -> _index `ux -> -> # *U &U _CSDResponse `ui `ux ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"733
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 733:         index++;
+[e ++ _index -> -> 1 `i `uc ]
+"736
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 736:         if((count == 0) && (CSDResponse[0] == SD_TOKEN_START))
+[e $ ! && == -> _count `i -> 0 `i == -> *U + &U _CSDResponse * -> -> -> 0 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `i -> . `E6588 0 `i 985  ]
+"737
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 737:         {
+{
+"739
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 739:             index = 0;
+[e = _index -> -> 0 `i `uc ]
+"740
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 740:         }
+}
+[e :U 985 ]
+"741
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 741:     }
+}
+[e ++ _count -> -> 1 `i `uc ]
+[e $ < -> _count `ui -> 20 `ui 982  ]
+[e :U 983 ]
+}
+"763
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 763:     mediaInformation.sectorSize = 512u;
+[e = . _mediaInformation 1 -> -> 512 `ui `us ]
+"769
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 769:     if(CSDResponse[0] & 0xC0)
+[e $ ! != & -> *U + &U _CSDResponse * -> -> -> 0 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `i -> 192 `i -> 0 `i 986  ]
+"770
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 770:     {
+{
+"775
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 775:         c_size = (((uint32_t)CSDResponse[7] & 0x3F) << 16) | ((uint16_t)CSDResponse[8] << 8) | CSDResponse[9];
+[e = _c_size | | << & -> *U + &U _CSDResponse * -> -> -> 7 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `ul -> -> -> 63 `i `l `ul -> 16 `i -> << -> -> *U + &U _CSDResponse * -> -> -> 8 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `us `ui -> 8 `i `ul -> *U + &U _CSDResponse * -> -> -> 9 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `ul ]
+"777
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 777:         mediaInformation.finalLBA = ((uint32_t)(c_size + 1) * (uint16_t)(1024u)) - 1;
+[e = . _mediaInformation 3 - * + _c_size -> -> -> 1 `i `l `ul -> -> -> 1024 `ui `us `ul -> -> -> 1 `i `l `ul ]
+"778
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 778:     }
+}
+[e $U 987  ]
+"779
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 779:     else
+[e :U 986 ]
+"780
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 780:     {
+{
+"784
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 784:         c_size = ((uint32_t)CSDResponse[6] << 16) | ((uint16_t)CSDResponse[7] << 8) | CSDResponse[8];
+[e = _c_size | | << -> *U + &U _CSDResponse * -> -> -> 6 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `ul -> 16 `i -> << -> -> *U + &U _CSDResponse * -> -> -> 7 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `us `ui -> 8 `i `ul -> *U + &U _CSDResponse * -> -> -> 8 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `ul ]
+"785
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 785:         c_size &= 0x0003FFC0;
+[e =& _c_size -> -> 262080 `l `ul ]
+"786
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 786:         c_size = c_size >> 6;
+[e = _c_size >> _c_size -> 6 `i ]
+"789
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 789:         c_size_mult = ((uint16_t)((CSDResponse[9] & 0x03) << 1)) | ((uint16_t)((CSDResponse[10] & 0x80) >> 7));
+[e = _c_size_mult -> | -> -> << & -> *U + &U _CSDResponse * -> -> -> 9 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `i -> 3 `i -> 1 `i `us `ui -> -> >> & -> *U + &U _CSDResponse * -> -> -> 10 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `i -> 128 `i -> 7 `i `us `ui `uc ]
+"792
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 792:         block_len = CSDResponse[5] & 0x0F;
+[e = _block_len -> & -> *U + &U _CSDResponse * -> -> -> 5 `i `ui `ux -> -> # *U &U _CSDResponse `ui `ux `i -> 15 `i `uc ]
+"794
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 794:         block_len = 1 << (block_len - 9);
+[e = _block_len -> << -> 1 `i - -> _block_len `i -> 9 `i `uc ]
+"799
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 799:         mediaInformation.finalLBA = ((uint32_t)(c_size + 1) * (uint16_t)((uint16_t)1 << (c_size_mult + 2)) * block_len) - 1;
+[e = . _mediaInformation 3 - * * + _c_size -> -> -> 1 `i `l `ul -> -> << -> -> -> 1 `i `us `ui + -> _c_size_mult `i -> 2 `i `us `ul -> _block_len `ul -> -> -> 1 `i `l `ul ]
+"800
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 800:     }
+}
+[e :U 987 ]
+"805
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 805:     (void)SD_SendCmd(SD_CRC_ON_OFF, 0x0);
+[e ( _SD_SendCmd (2 , -> . `E6694 17 `uc -> -> -> 0 `i `l `ul ]
+"808
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 808:     (void)SD_SendCmd(SD_SET_BLOCK_LENGTH , mediaInformation.sectorSize);
+[e ( _SD_SendCmd (2 , -> . `E6694 7 `uc -> . _mediaInformation 1 `ul ]
+"811
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 811:     do { LATCbits.LATC2 = 1; } while(0);
+[e :U 990 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 989 ]
+"814
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 814:     if(mediaInformation.errorCode == MEDIA_NO_ERROR)
+[e $ ! == -> . _mediaInformation 0 `ui -> . `E6578 0 `ui 991  ]
+"815
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 815:     {
+{
+"816
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 816:         mediaInformation.state = SD_STATE_READY_FOR_COMMAND;
+[e = . _mediaInformation 2 . `E6574 1 ]
+"817
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 817:         spiMaster[SDFAST].spiClose();
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 0 ..  ]
+"818
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 818:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 921  ]
+"819
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 819:     }
+}
+[e :U 991 ]
+"821
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 821:     spiMaster[SDFAST].spiClose();
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 0 ..  ]
+"822
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 822:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 921  ]
+"823
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 823: }
+[e :UE 921 ]
+}
+"825
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 825: static uint8_t SD_SPI_AsyncReadTasks(struct SD_ASYNC_IO* info)
+[v _SD_SPI_AsyncReadTasks `(uc ~T0 @X0 1 sf1`*S858 ]
+"826
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 826: {
+{
+[e :U _SD_SPI_AsyncReadTasks ]
+"825
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 825: static uint8_t SD_SPI_AsyncReadTasks(struct SD_ASYNC_IO* info)
+[v _info `*S858 ~T0 @X0 1 r1 ]
+"826
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 826: {
+[f ]
+"827
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 827:     uint8_t bData;
+[v _bData `uc ~T0 @X0 1 a ]
+"828
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 828:     SD_RESPONSE response;
+[v _response `S871 ~T0 @X0 1 a ]
+"829
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 829:     static uint16_t blockCounter;
+[v F6799 `us ~T0 @X0 1 s blockCounter ]
+"830
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 830:     static uint32_t longTimeoutCounter;
+[v F6800 `ul ~T0 @X0 1 s longTimeoutCounter ]
+"831
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 831:     static _Bool SingleBlockRead;
+[v F6801 `a ~T0 @X0 1 s SingleBlockRead ]
+"834
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 834:     switch(info->bStateVariable)
+[e $U 994  ]
+"835
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 835:     {
+{
+"836
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 836:         case 0x00:
+[e :U 995 ]
+"837
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 837:             return 0x00;
+[e ) -> -> 0 `i `uc ]
+[e $UE 992  ]
+"838
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 838:         case 0x01:
+[e :U 996 ]
+"842
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 842:             mediaInformation.state = SD_STATE_BUSY;
+[e = . _mediaInformation 2 . `E6574 2 ]
+"843
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 843:             blockCounter = 512u;
+[e = F6799 -> -> 512 `ui `us ]
+"844
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 844:             ioInfo = *info;
+[e = _ioInfo *U _info ]
+"850
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 850:             if (mediaInformation.gSDMode == 0)
+[e $ ! == -> . _mediaInformation 4 `i -> 0 `i 997  ]
+"851
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 851:             {
+{
+"852
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 852:                 ioInfo.dwAddress <<= 9;
+[e =<< . _ioInfo 3 -> -> 9 `i `ul ]
+"853
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 853:             }
+}
+[e :U 997 ]
+"854
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 854:             if(ioInfo.dwBytesRemaining <= 512u)
+[e $ ! <= . _ioInfo 1 -> -> 512 `ui `ul 998  ]
+"855
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 855:             {
+{
+"856
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 856:                 SingleBlockRead = 1;
+[e = F6801 -> -> 1 `i `a ]
+"857
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 857:                 response = SD_SendCmd(SD_READ_SINGLE_BLOCK, ioInfo.dwAddress);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 8 `uc . _ioInfo 3 ]
+"858
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 858:             }
+}
+[e $U 999  ]
+"859
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 859:             else
+[e :U 998 ]
+"860
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 860:             {
+{
+"861
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 861:                 SingleBlockRead = 0;
+[e = F6801 -> -> 0 `i `a ]
+"862
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 862:                 response = SD_SendCmd(SD_READ_MULTI_BLOCK, ioInfo.dwAddress);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 9 `uc . _ioInfo 3 ]
+"863
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 863:             }
+}
+[e :U 999 ]
+"869
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 869:             if(response.r1._byte != 0x00)
+[e $ ! != -> . . _response 0 0 `i -> 0 `i 1000  ]
+"870
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 870:             {
+{
+"872
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 872:                 info->bStateVariable = 0xFE;
+[e = . *U _info 4 -> -> 254 `i `uc ]
+"873
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 873:                 return 0x01;
+[e ) -> -> 1 `i `uc ]
+[e $UE 992  ]
+"874
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 874:             }
+}
+[e :U 1000 ]
+"879
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 879:             longTimeoutCounter = (uint32_t)0x40000;
+[e = F6800 -> -> 262144 `l `ul ]
+"880
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 880:             info->bStateVariable = 0x03;
+[e = . *U _info 4 -> -> 3 `i `uc ]
+"881
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 881:             return 0x01;
+[e ) -> -> 1 `i `uc ]
+[e $UE 992  ]
+"883
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 883:         case 0x03:
+[e :U 1001 ]
+"888
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 888:             if(longTimeoutCounter != 0x00000000)
+[e $ ! != F6800 -> -> -> 0 `i `l `ul 1002  ]
+"889
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 889:             {
+{
+"890
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 890:                 longTimeoutCounter--;
+[e -- F6800 -> -> -> 1 `i `l `ul ]
+"891
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 891:                 bData = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = _bData ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"893
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 893:                 if(bData != SD_TOKEN_FLOATING_BUS)
+[e $ ! != -> _bData `i -> . `E6588 4 `i 1003  ]
+"894
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 894:                 {
+{
+"895
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 895:                     if(bData == SD_TOKEN_START)
+[e $ ! == -> _bData `i -> . `E6588 0 `i 1004  ]
+"896
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 896:                     {
+{
+"899
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 899:                         info->bStateVariable = 0x02;
+[e = . *U _info 4 -> -> 2 `i `uc ]
+"900
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 900:                         return 0x02;
+[e ) -> -> 2 `i `uc ]
+[e $UE 992  ]
+"901
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 901:                     }
+}
+[e $U 1005  ]
+"902
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 902:                     else
+[e :U 1004 ]
+"903
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 903:                     {
+{
+"906
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 906:                         info->bStateVariable = 0xFE;
+[e = . *U _info 4 -> -> 254 `i `uc ]
+"907
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 907:                         return 0x01;
+[e ) -> -> 1 `i `uc ]
+[e $UE 992  ]
+"908
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 908:                     }
+}
+[e :U 1005 ]
+"909
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 909:                 }
+}
+[e $U 1006  ]
+"910
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 910:                 else
+[e :U 1003 ]
+"911
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 911:                 {
+{
+"913
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 913:                     return 0x01;
+[e ) -> -> 1 `i `uc ]
+[e $UE 992  ]
+"914
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 914:                 }
+}
+[e :U 1006 ]
+"915
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 915:             }
+}
+[e $U 1007  ]
+"916
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 916:             else
+[e :U 1002 ]
+"917
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 917:             {
+{
+"920
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 920:                 info->bStateVariable = 0xFE;
+[e = . *U _info 4 -> -> 254 `i `uc ]
+"921
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 921:                 return 0x01;
+[e ) -> -> 1 `i `uc ]
+[e $UE 992  ]
+"922
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 922:             }
+}
+[e :U 1007 ]
+"923
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 923:             break;
+[e $U 993  ]
+"925
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 925:         case 0x02:
+[e :U 1008 ]
+"929
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 929:             if(ioInfo.dwBytesRemaining != 0x00000000)
+[e $ ! != . _ioInfo 1 -> -> -> 0 `i `l `ul 1009  ]
+"930
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 930:             {
+{
+"933
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 933:                 ioInfo.wNumBytes = info->wNumBytes;
+[e = . _ioInfo 0 . *U _info 0 ]
+"934
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 934:                 ioInfo.pBuffer = info->pBuffer;
+[e = . _ioInfo 2 . *U _info 2 ]
+"937
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 937:                 ioInfo.dwBytesRemaining -= ioInfo.wNumBytes;
+[e =- . _ioInfo 1 -> . _ioInfo 0 `ul ]
+"938
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 938:                 blockCounter -= ioInfo.wNumBytes;
+[e =- F6799 -> . _ioInfo 0 `us ]
+"942
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 942:                 (void)memset(ioInfo.pBuffer, 0xFF, ioInfo.wNumBytes);
+[e ( _memset (3 , , -> . _ioInfo 2 `*v -> 255 `i -> . _ioInfo 0 `ui ]
+"943
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 943:                 spiMaster[SDFAST].exchangeBlock(ioInfo.pBuffer, ioInfo.wNumBytes);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 3 (2 , -> . _ioInfo 2 `*v -> . _ioInfo 0 `ui ]
+"948
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 948:                 if(blockCounter == 0)
+[e $ ! == -> F6799 `ui -> -> 0 `i `ui 1010  ]
+"949
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 949:                 {
+{
+"951
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 951:                     (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"952
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 952:                     (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"958
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 958:                     if(ioInfo.dwBytesRemaining != 0x00000000)
+[e $ ! != . _ioInfo 1 -> -> -> 0 `i `l `ul 1011  ]
+"959
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 959:                     {
+{
+"960
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 960:                         info->bStateVariable = 0x03;
+[e = . *U _info 4 -> -> 3 `i `uc ]
+"961
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 961:                     }
+}
+[e :U 1011 ]
+"962
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 962:                     blockCounter = 512u;
+[e = F6799 -> -> 512 `ui `us ]
+"963
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 963:                     return 0x01;
+[e ) -> -> 1 `i `uc ]
+[e $UE 992  ]
+"964
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 964:                 }
+}
+[e :U 1010 ]
+"966
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 966:                 return 0x02;
+[e ) -> -> 2 `i `uc ]
+[e $UE 992  ]
+"967
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 967:             }
+}
+[e $U 1012  ]
+"968
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 968:             else
+[e :U 1009 ]
+"969
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 969:             {
+{
+"974
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 974:                 if(SingleBlockRead == 0)
+[e $ ! == -> F6801 `i -> 0 `i 1013  ]
+"975
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 975:                 {
+{
+"976
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 976:                     (void)SD_SendCmd(SD_STOP_TRANSMISSION, 0x00000000);
+[e ( _SD_SendCmd (2 , -> . `E6694 5 `uc -> -> -> 0 `i `l `ul ]
+"977
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 977:                 }
+}
+[e :U 1013 ]
+"978
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 978:                 do { LATCbits.LATC2 = 1; } while(0);
+[e :U 1016 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1015 ]
+"979
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 979:                 (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"980
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 980:                 info->bStateVariable = 0x00;
+[e = . *U _info 4 -> -> 0 `i `uc ]
+"981
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 981:                 mediaInformation.state = SD_STATE_READY_FOR_COMMAND;
+[e = . _mediaInformation 2 . `E6574 1 ]
+"982
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 982:                 return 0x00;
+[e ) -> -> 0 `i `uc ]
+[e $UE 992  ]
+"983
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 983:             }
+}
+[e :U 1012 ]
+"984
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 984:         case 0xFE:
+[e :U 1017 ]
+"986
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 986:             info->bStateVariable = 0xFF;
+[e = . *U _info 4 -> -> 255 `i `uc ]
+"988
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 988:             response = SD_SendCmd(SD_STOP_TRANSMISSION, 0x00000000);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 5 `uc -> -> -> 0 `i `l `ul ]
+"990
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 990:         case 0xFF:
+[e :U 1018 ]
+"991
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 991:         default:
+[e :U 1019 ]
+"993
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 993:             do { LATCbits.LATC2 = 1; } while(0);
+[e :U 1022 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1021 ]
+"994
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 994:             (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"995
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 995:             mediaInformation.state = SD_STATE_READY_FOR_COMMAND;
+[e = . _mediaInformation 2 . `E6574 1 ]
+"996
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 996:             return 0xFF;
+[e ) -> -> 255 `i `uc ]
+[e $UE 992  ]
+"997
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 997:     }
+}
+[e $U 993  ]
+[e :U 994 ]
+[e [\ -> . *U _info 4 `i , $ -> 0 `i 995
+ , $ -> 1 `i 996
+ , $ -> 3 `i 1001
+ , $ -> 2 `i 1008
+ , $ -> 254 `i 1017
+ , $ -> 255 `i 1018
+ 1019 ]
+[e :U 993 ]
+"998
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 998: }
+[e :UE 992 ]
+}
+"1001
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1001: static uint8_t SD_SPI_AsyncWriteTasks(struct SD_ASYNC_IO* info)
+[v _SD_SPI_AsyncWriteTasks `(uc ~T0 @X0 1 sf1`*S858 ]
+"1002
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1002: {
+{
+[e :U _SD_SPI_AsyncWriteTasks ]
+"1001
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1001: static uint8_t SD_SPI_AsyncWriteTasks(struct SD_ASYNC_IO* info)
+[v _info `*S858 ~T0 @X0 1 r1 ]
+"1002
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1002: {
+[f ]
+"1003
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1003:     static uint8_t data_byte;
+[v F6823 `uc ~T0 @X0 1 s data_byte ]
+"1004
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1004:     static uint16_t blockCounter;
+[v F6824 `us ~T0 @X0 1 s blockCounter ]
+"1005
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1005:     static uint32_t WriteTimeout;
+[v F6825 `ul ~T0 @X0 1 s WriteTimeout ]
+"1006
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1006:     static uint8_t command;
+[v F6826 `uc ~T0 @X0 1 s command ]
+"1007
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1007:     uint32_t preEraseBlockCount;
+[v _preEraseBlockCount `ul ~T0 @X0 1 a ]
+"1008
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1008:     SD_RESPONSE response;
+[v _response `S871 ~T0 @X0 1 a ]
+"1011
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1011:     switch(info->bStateVariable)
+[e $U 1025  ]
+"1012
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1012:     {
+{
+"1013
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1013:         case 0x00:
+[e :U 1026 ]
+"1014
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1014:             return 0x00;
+[e ) -> -> 0 `i `uc ]
+[e $UE 1023  ]
+"1016
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1016:         case 0x01:
+[e :U 1027 ]
+"1018
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1018:             mediaInformation.state = SD_STATE_BUSY;
+[e = . _mediaInformation 2 . `E6574 2 ]
+"1019
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1019:             blockCounter = 512u;
+[e = F6824 -> -> 512 `ui `us ]
+"1024
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1024:             ioInfo = *info;
+[e = _ioInfo *U _info ]
+"1028
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1028:             if(ioInfo.dwBytesRemaining <= 512u)
+[e $ ! <= . _ioInfo 1 -> -> 512 `ui `ul 1028  ]
+"1029
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1029:             {
+{
+"1030
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1030:                 command = SD_WRITE_SINGLE_BLOCK;
+[e = F6826 -> . `E6694 10 `uc ]
+"1031
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1031:             }
+}
+[e $U 1029  ]
+"1032
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1032:             else
+[e :U 1028 ]
+"1033
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1033:             {
+{
+"1034
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1034:                 command = SD_WRITE_MULTI_BLOCK;
+[e = F6826 -> . `E6694 11 `uc ]
+"1037
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1037:                 preEraseBlockCount = (ioInfo.dwBytesRemaining >> 9);
+[e = _preEraseBlockCount >> . _ioInfo 1 -> 9 `i ]
+"1039
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1039:                 if(preEraseBlockCount == 0)
+[e $ ! == _preEraseBlockCount -> -> -> 0 `i `l `ul 1030  ]
+"1040
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1040:                 {
+{
+"1041
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1041:                     preEraseBlockCount++;
+[e ++ _preEraseBlockCount -> -> -> 1 `i `l `ul ]
+"1042
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1042:                 }
+}
+[e :U 1030 ]
+"1047
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1047:                 response = SD_SendCmd(SD_APP_CMD, 0x00000000);
+[e = _response ( _SD_SendCmd (2 , -> . `E6694 15 `uc -> -> -> 0 `i `l `ul ]
+"1048
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1048:                 if(response.r1._byte == 0x00)
+[e $ ! == -> . . _response 0 0 `i -> 0 `i 1031  ]
+"1049
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1049:                 {
+{
+"1050
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1050:                     SD_SendCmd(SD_SET_WRITE_BLOCK_ERASE_COUNT , preEraseBlockCount);
+[e ( _SD_SendCmd (2 , -> . `E6694 19 `uc _preEraseBlockCount ]
+"1051
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1051:                 }
+}
+[e :U 1031 ]
+"1052
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1052:             }
+}
+[e :U 1029 ]
+"1059
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1059:             if (mediaInformation.gSDMode == 0)
+[e $ ! == -> . _mediaInformation 4 `i -> 0 `i 1032  ]
+"1060
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1060:             {
+{
+"1061
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1061:                 ioInfo.dwAddress <<= 9;
+[e =<< . _ioInfo 3 -> -> 9 `i `ul ]
+"1062
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1062:             }
+}
+[e :U 1032 ]
+"1066
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1066:             response = SD_SendCmd(command, ioInfo.dwAddress);
+[e = _response ( _SD_SendCmd (2 , F6826 . _ioInfo 3 ]
+"1069
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1069:             if(response.r1._byte != 0x00)
+[e $ ! != -> . . _response 0 0 `i -> 0 `i 1033  ]
+"1070
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1070:             {
+{
+"1072
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1072:                 info->bStateVariable = 0xFF;
+[e = . *U _info 4 -> -> 255 `i `uc ]
+"1073
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1073:                 return 0xFF;
+[e ) -> -> 255 `i `uc ]
+[e $UE 1023  ]
+"1074
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1074:             }
+}
+[e $U 1034  ]
+"1075
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1075:             else
+[e :U 1033 ]
+"1076
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1076:             {
+{
+"1078
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1078:                 info->bStateVariable = 0x02;
+[e = . *U _info 4 -> -> 2 `i `uc ]
+"1079
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1079:             }
+}
+[e :U 1034 ]
+"1080
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1080:             return 0x02;
+[e ) -> -> 2 `i `uc ]
+[e $UE 1023  ]
+"1082
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1082:         case 0x02:
+[e :U 1035 ]
+"1085
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1085:             if(blockCounter == 512u)
+[e $ ! == -> F6824 `ui -> 512 `ui 1036  ]
+"1086
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1086:             {
+{
+"1088
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1088:                 if(command == SD_WRITE_MULTI_BLOCK)
+[e $ ! == -> F6826 `i -> . `E6694 11 `i 1037  ]
+"1089
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1089:                 {
+{
+"1090
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1090:                     (void)spiMaster[SDFAST].exchangeByte(SD_TOKEN_START_MULTI_BLOCK);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> . `E6588 1 `uc ]
+"1091
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1091:                 }
+}
+[e $U 1038  ]
+"1092
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1092:                 else
+[e :U 1037 ]
+"1093
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1093:                 {
+{
+"1095
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1095:                     (void)spiMaster[SDFAST].exchangeByte(SD_TOKEN_START);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> . `E6588 0 `uc ]
+"1096
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1096:                 }
+}
+[e :U 1038 ]
+"1097
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1097:             }
+}
+[e :U 1036 ]
+"1101
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1101:             ioInfo.wNumBytes = info->wNumBytes;
+[e = . _ioInfo 0 . *U _info 0 ]
+"1102
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1102:             ioInfo.pBuffer = info->pBuffer;
+[e = . _ioInfo 2 . *U _info 2 ]
+"1105
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1105:             ioInfo.dwBytesRemaining -= ioInfo.wNumBytes;
+[e =- . _ioInfo 1 -> . _ioInfo 0 `ul ]
+"1106
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1106:             blockCounter -= ioInfo.wNumBytes;
+[e =- F6824 -> . _ioInfo 0 `us ]
+"1108
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1108:             spiMaster[SDFAST].exchangeBlock(ioInfo.pBuffer, ioInfo.wNumBytes);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 3 (2 , -> . _ioInfo 2 `*v -> . _ioInfo 0 `ui ]
+"1112
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1112:             if(blockCounter == 0)
+[e $ ! == -> F6824 `ui -> -> 0 `i `ui 1039  ]
+"1113
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1113:             {
+{
+"1114
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1114:                 blockCounter = 512u;
+[e = F6824 -> -> 512 `ui `us ]
+"1117
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1117:                 (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1118
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1118:                 (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1122
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1122:                 if((spiMaster[SDFAST].exchangeByte(0xFF) & 0x1F) != SD_TOKEN_DATA_ACCEPTED)
+[e $ ! != & -> ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc `i -> 31 `i -> . `E6588 3 `i 1040  ]
+"1123
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1123:                 {
+{
+"1126
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1126:                     info->bStateVariable = 0xFE;
+[e = . *U _info 4 -> -> 254 `i `uc ]
+"1127
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1127:                     return 0x03;
+[e ) -> -> 3 `i `uc ]
+[e $UE 1023  ]
+"1128
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1128:                 }
+}
+[e :U 1040 ]
+"1133
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1133:                 info->bStateVariable = 0x03;
+[e = . *U _info 4 -> -> 3 `i `uc ]
+"1134
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1134:                 WriteTimeout = (uint32_t)0xA0000;
+[e = F6825 -> -> 655360 `l `ul ]
+"1135
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1135:                 return 0x03;
+[e ) -> -> 3 `i `uc ]
+[e $UE 1023  ]
+"1136
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1136:             }
+}
+[e :U 1039 ]
+"1140
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1140:             return 0x02;
+[e ) -> -> 2 `i `uc ]
+[e $UE 1023  ]
+"1142
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1142:         case 0x03:
+[e :U 1041 ]
+"1143
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1143:             if(WriteTimeout != 0)
+[e $ ! != F6825 -> -> -> 0 `i `l `ul 1042  ]
+"1144
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1144:             {
+{
+"1145
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1145:                 WriteTimeout--;
+[e -- F6825 -> -> -> 1 `i `l `ul ]
+"1146
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1146:                 (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1147
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1147:                 data_byte = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = F6823 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1148
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1148:                 if(data_byte != 0x00)
+[e $ ! != -> F6823 `i -> 0 `i 1043  ]
+"1149
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1149:                 {
+{
+"1153
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1153:                     if(ioInfo.dwBytesRemaining == 0)
+[e $ ! == . _ioInfo 1 -> -> -> 0 `i `l `ul 1044  ]
+"1154
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1154:                     {
+{
+"1155
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1155:                         WriteTimeout = (uint32_t)0xA0000;
+[e = F6825 -> -> 655360 `l `ul ]
+"1156
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1156:                         if(command == SD_WRITE_MULTI_BLOCK)
+[e $ ! == -> F6826 `i -> . `E6694 11 `i 1045  ]
+"1157
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1157:                         {
+{
+"1159
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1159:                             (void)spiMaster[SDFAST].exchangeByte(SD_TOKEN_STOP_TRANSMISSION);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> . `E6588 2 `uc ]
+"1166
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1166:                             (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1169
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1169:                             info->bStateVariable = 0x04;
+[e = . *U _info 4 -> -> 4 `i `uc ]
+"1170
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1170:                             return 0x03;
+[e ) -> -> 3 `i `uc ]
+[e $UE 1023  ]
+"1171
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1171:                         }
+}
+[e $U 1046  ]
+"1172
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1172:                         else
+[e :U 1045 ]
+"1173
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1173:                         {
+{
+"1177
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1177:                             do { LATCbits.LATC2 = 1; } while(0);
+[e :U 1049 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1048 ]
+"1178
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1178:                             (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1179
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1179:                             info->bStateVariable = 0x00;
+[e = . *U _info 4 -> -> 0 `i `uc ]
+"1180
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1180:                             mediaInformation.state = SD_STATE_READY_FOR_COMMAND;
+[e = . _mediaInformation 2 . `E6574 1 ]
+"1181
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1181:                             return 0x00;
+[e ) -> -> 0 `i `uc ]
+[e $UE 1023  ]
+"1182
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1182:                         }
+}
+[e :U 1046 ]
+"1184
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1184:                     }
+}
+[e :U 1044 ]
+"1186
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1186:                     info->bStateVariable = 0x02;
+[e = . *U _info 4 -> -> 2 `i `uc ]
+"1187
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1187:                     return 0x02;
+[e ) -> -> 2 `i `uc ]
+[e $UE 1023  ]
+"1188
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1188:                 }
+}
+[e $U 1050  ]
+"1189
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1189:                 else
+[e :U 1043 ]
+"1190
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1190:                 {
+{
+"1192
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1192:                     return 0x03;
+[e ) -> -> 3 `i `uc ]
+[e $UE 1023  ]
+"1193
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1193:                 }
+}
+[e :U 1050 ]
+"1194
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1194:             }
+}
+[e $U 1051  ]
+"1195
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1195:             else
+[e :U 1042 ]
+"1196
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1196:             {
+{
+"1199
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1199:                 info->bStateVariable = 0xFE;
+[e = . *U _info 4 -> -> 254 `i `uc ]
+"1200
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1200:                 return 0x03;
+[e ) -> -> 3 `i `uc ]
+[e $UE 1023  ]
+"1201
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1201:             }
+}
+[e :U 1051 ]
+"1203
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1203:         case 0x04:
+[e :U 1052 ]
+"1208
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1208:             if(WriteTimeout != 0)
+[e $ ! != F6825 -> -> -> 0 `i `l `ul 1053  ]
+"1209
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1209:             {
+{
+"1210
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1210:                 WriteTimeout--;
+[e -- F6825 -> -> -> 1 `i `l `ul ]
+"1211
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1211:                 data_byte = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = F6823 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1213
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1213:                 if(data_byte != 0x00)
+[e $ ! != -> F6823 `i -> 0 `i 1054  ]
+"1214
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1214:                 {
+{
+"1222
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1222:                     do { LATCbits.LATC2 = 1; } while(0);
+[e :U 1057 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1056 ]
+"1223
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1223:                     (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1224
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1224:                     info->bStateVariable = 0x00;
+[e = . *U _info 4 -> -> 0 `i `uc ]
+"1225
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1225:                     mediaInformation.state = SD_STATE_READY_FOR_COMMAND;
+[e = . _mediaInformation 2 . `E6574 1 ]
+"1226
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1226:                     return 0x00;
+[e ) -> -> 0 `i `uc ]
+[e $UE 1023  ]
+"1227
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1227:                 }
+}
+[e :U 1054 ]
+"1229
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1229:                 return 0x03;
+[e ) -> -> 3 `i `uc ]
+[e $UE 1023  ]
+"1230
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1230:             }
+}
+[e :U 1053 ]
+"1232
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1232:         case 0xFE:
+[e :U 1058 ]
+"1235
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1235:             (void)SD_SendCmd(SD_STOP_TRANSMISSION, 0x00000000);
+[e ( _SD_SendCmd (2 , -> . `E6694 5 `uc -> -> -> 0 `i `l `ul ]
+"1236
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1236:             do { LATCbits.LATC2 = 1; } while(0);
+[e :U 1061 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1060 ]
+"1237
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1237:             (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1238
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1238:             info->bStateVariable = 0xFF;
+[e = . *U _info 4 -> -> 255 `i `uc ]
+"1240
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1240:         default:
+[e :U 1062 ]
+"1242
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1242:             mediaInformation.state = SD_STATE_READY_FOR_COMMAND;
+[e = . _mediaInformation 2 . `E6574 1 ]
+"1243
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1243:             return 0xFF;
+[e ) -> -> 255 `i `uc ]
+[e $UE 1023  ]
+"1244
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1244:     }
+}
+[e $U 1024  ]
+[e :U 1025 ]
+[e [\ -> . *U _info 4 `i , $ -> 0 `i 1026
+ , $ -> 1 `i 1027
+ , $ -> 2 `i 1035
+ , $ -> 3 `i 1041
+ , $ -> 4 `i 1052
+ , $ -> 254 `i 1058
+ 1062 ]
+[e :U 1024 ]
+"1245
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1245: }
+[e :UE 1023 ]
+}
+"1247
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1247: static SD_RESPONSE SD_SendCmd (uint8_t cmd, uint32_t address)
+[v _SD_SendCmd `(S871 ~T0 @X0 1 sf2`uc`ul ]
+"1248
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1248: {
+{
+[e :U _SD_SendCmd ]
+"1247
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1247: static SD_RESPONSE SD_SendCmd (uint8_t cmd, uint32_t address)
+[v _cmd `uc ~T0 @X0 1 r1 ]
+[v _address `ul ~T0 @X0 1 r2 ]
+"1248
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1248: {
+[f ]
+"1249
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1249:     SD_RESPONSE response;
+[v _response `S871 ~T0 @X0 1 a ]
+"1250
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1250:     uint16_t timeout;
+[v _timeout `us ~T0 @X0 1 a ]
+"1251
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1251:     uint32_t longTimeout;
+[v _longTimeout `ul ~T0 @X0 1 a ]
+"1252
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1252:     uint8_t address_bytes[4];
+[v _address_bytes `uc ~T0 @X0 -> 4 `i a ]
+"1254
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1254:     do { LATCbits.LATC2 = 0; } while(0);
+[e :U 1066 ]
+{
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 1065 ]
+"1256
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1256:     (void)memcpy(address_bytes, &address, sizeof(address));
+[e ( _memcpy (3 , , -> &U _address_bytes `*v -> &U _address `*Cv -> # _address `ui ]
+"1258
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1258:     (void)spiMaster[SDFAST].exchangeByte(sdmmc_cmdtable[cmd].CmdCode | (1<<6));
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> | -> . *U + &U _sdmmc_cmdtable * -> _cmd `ux -> -> # *U &U _sdmmc_cmdtable `ui `ux 0 `ui -> << -> 1 `i -> 6 `i `ui `uc ]
+"1260
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1260:     (void)spiMaster[SDFAST].exchangeByte(address_bytes[3]);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 *U + &U _address_bytes * -> -> -> 3 `i `ui `ux -> -> # *U &U _address_bytes `ui `ux ]
+"1261
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1261:     (void)spiMaster[SDFAST].exchangeByte(address_bytes[2]);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 *U + &U _address_bytes * -> -> -> 2 `i `ui `ux -> -> # *U &U _address_bytes `ui `ux ]
+"1262
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1262:     (void)spiMaster[SDFAST].exchangeByte(address_bytes[1]);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 *U + &U _address_bytes * -> -> -> 1 `i `ui `ux -> -> # *U &U _address_bytes `ui `ux ]
+"1263
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1263:     (void)spiMaster[SDFAST].exchangeByte(address_bytes[0]);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 *U + &U _address_bytes * -> -> -> 0 `i `ui `ux -> -> # *U &U _address_bytes `ui `ux ]
+"1265
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1265:     (void)spiMaster[SDFAST].exchangeByte(sdmmc_cmdtable[cmd].CRC);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 . *U + &U _sdmmc_cmdtable * -> _cmd `ux -> -> # *U &U _sdmmc_cmdtable `ui `ux 1 ]
+"1270
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1270:     if(cmd == SD_STOP_TRANSMISSION)
+[e $ ! == -> _cmd `i -> . `E6694 5 `i 1067  ]
+"1271
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1271:     {
+{
+"1272
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1272:         (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1273
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1273:     }
+}
+[e :U 1067 ]
+"1278
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1278:     timeout = (uint16_t)20;
+[e = _timeout -> -> 20 `i `us ]
+"1279
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1279:     do
+[e :U 1070 ]
+"1280
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1280:     {
+{
+"1281
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1281:         response.r1._byte = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = . . _response 0 0 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1282
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1282:         timeout--;
+[e -- _timeout -> -> 1 `i `us ]
+"1283
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1283:     }while((response.r1._byte == SD_TOKEN_FLOATING_BUS) && (timeout != 0));
+}
+[e $ && == -> . . _response 0 0 `i -> . `E6588 4 `i != -> _timeout `ui -> -> 0 `i `ui 1070  ]
+[e :U 1069 ]
+"1286
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1286:     if(sdmmc_cmdtable[cmd].responsetype == SD_RESPONSE_R2)
+[e $ ! == -> . *U + &U _sdmmc_cmdtable * -> _cmd `ux -> -> # *U &U _sdmmc_cmdtable `ui `ux 2 `ui -> . `E6615 2 `ui 1071  ]
+"1287
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1287:     {
+{
+"1288
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1288:         response.r2._byte1 = response.r1._byte;
+[e = . . . _response 1 1 1 . . _response 0 0 ]
+"1289
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1289:         response.r2._byte0 = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = . . . _response 1 1 0 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1290
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1290:     }
+}
+[e $U 1072  ]
+"1291
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1291:     else if(sdmmc_cmdtable[cmd].responsetype == SD_RESPONSE_R1b)
+[e :U 1071 ]
+[e $ ! == -> . *U + &U _sdmmc_cmdtable * -> _cmd `ux -> -> # *U &U _sdmmc_cmdtable `ui `ux 2 `ui -> . `E6615 1 `ui 1073  ]
+"1292
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1292:     {
+{
+"1300
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1300:         longTimeout = (uint32_t)0xA0000;
+[e = _longTimeout -> -> 655360 `l `ul ]
+"1301
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1301:         do
+[e :U 1076 ]
+"1302
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1302:         {
+{
+"1303
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1303:             response.r1._byte = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = . . _response 0 0 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1304
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1304:             longTimeout--;
+[e -- _longTimeout -> -> -> 1 `i `l `ul ]
+"1305
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1305:         }while((response.r1._byte == 0x00) && (longTimeout != 0));
+}
+[e $ && == -> . . _response 0 0 `i -> 0 `i != _longTimeout -> -> -> 0 `i `l `ul 1076  ]
+[e :U 1075 ]
+"1307
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1307:         response.r1._byte = 0x00;
+[e = . . _response 0 0 -> -> 0 `i `uc ]
+"1308
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1308:     }
+}
+[e $U 1077  ]
+"1309
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1309:     else if (sdmmc_cmdtable[cmd].responsetype == SD_RESPONSE_R7)
+[e :U 1073 ]
+[e $ ! == -> . *U + &U _sdmmc_cmdtable * -> _cmd `ux -> -> # *U &U _sdmmc_cmdtable `ui `ux 2 `ui -> . `E6615 4 `ui 1078  ]
+"1310
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1310:     {
+{
+"1316
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1316:         response.r7.bytewise.argument._byte3 = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = . . . . . _response 2 0 1 1 3 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1317
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1317:         response.r7.bytewise.argument._byte2 = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = . . . . . _response 2 0 1 1 2 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1318
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1318:         response.r7.bytewise.argument._byte1 = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = . . . . . _response 2 0 1 1 1 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1319
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1319:         response.r7.bytewise.argument._byte0 = spiMaster[SDFAST].exchangeByte(0xFF);
+[e = . . . . . _response 2 0 1 1 0 ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1320
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1320:     }
+}
+[e :U 1078 ]
+[e :U 1077 ]
+[e :U 1072 ]
+"1325
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1325:     (void)spiMaster[SDFAST].exchangeByte(0xFF);
+[e ( *U . *U + &U _spiMaster * -> . `E6515 0 `ux -> -> # *U &U _spiMaster `ui `ux 2 (1 -> -> 255 `i `uc ]
+"1328
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1328:     if( sdmmc_cmdtable[cmd].moreDataExpected == 0 )
+[e $ ! == -> . *U + &U _sdmmc_cmdtable * -> _cmd `ux -> -> # *U &U _sdmmc_cmdtable `ui `ux 3 `i -> 0 `i 1079  ]
+"1329
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1329:     {
+{
+"1330
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1330:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 1082 ]
+{
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 1081 ]
+"1331
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1331:     }
+}
+[e :U 1079 ]
+"1333
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1333:     return(response);
+[e ) _response ]
+[e $UE 1063  ]
+"1334
+[; ;mcc_generated_files/sd_spi/sd_spi.c: 1334: }
+[e :UE 1063 ]
+}
